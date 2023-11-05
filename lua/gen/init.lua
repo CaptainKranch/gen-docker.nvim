@@ -51,7 +51,7 @@ local function get_window_options()
     }
 end
 
-M.command = 'docker exec ollama ollama run $model $prompt'
+M.command = 'docker exec -it ollama ollama run $model $prompt'
 M.model = 'mistral:instruct'
 
 M.exec = function(options)
