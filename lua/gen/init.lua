@@ -51,7 +51,7 @@ local function get_window_options()
     }
 end
 
-M.command = 'ollama run $model $prompt'
+M.command = 'docker exec ollama ollama run $model $prompt'
 M.model = 'mistral:instruct'
 
 M.exec = function(options)
@@ -59,7 +59,7 @@ M.exec = function(options)
         model = M.model,
         command = M.command
     }, options)
-    pcall(io.popen, 'ollama serve > /dev/null 2>&1 &')
+    --pcall(io.popen, 'ollama serve > /dev/null 2>&1 &')
     curr_buffer = vim.fn.bufnr('%')
     local mode = opts.mode or vim.fn.mode()
     if mode == 'v' or mode == 'V' then
