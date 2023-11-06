@@ -51,21 +51,16 @@ local function get_window_options()
     }
 end
 
-local useDocker = require('gen').container
 
-local function should_use_docker(useDocker)
-    -- If useDocker is true, return true; otherwise, return false.
-    return useDocker
-end
+M.useDocker = false
+M.model = 'llama2'
 
-if should_use_docker(useDocker) then
+if M.useDocker then
     M.command = 'docker exec ollama ollama run $model $prompt'
 else
     M.command = 'ollama run $model $prompt'
 end
 
-M.command = 'docker exec ollama ollama run $model $prompt'
-M.model = 'llama2'
 
 M.exec = function(options)
     local opts = vim.tbl_deep_extend('force', {
