@@ -3,9 +3,9 @@ local curr_buffer = nil
 local start_pos = nil
 local end_pos = nil
 local prompts = require('gen.prompts')
-local exec = requiere('gen.exec')
-local exec_docker = requiere('gen.exec_docker')
-local config = requiere('gen.config')
+local exec = require('gen.exec')
+local exec_docker = require('gen.exec_docker')
+local config = require('gen.config')
 local utility = require('gen.utility')
 
 M.useDocker = false
