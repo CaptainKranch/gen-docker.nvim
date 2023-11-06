@@ -1,4 +1,4 @@
-local function exec_docker(options)
+function exec_docker(options)
     local opts = vim.tbl_deep_extend('force', {
         model = M.model,
         command = M.command
