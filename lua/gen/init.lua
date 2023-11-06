@@ -6,9 +6,13 @@ local prompts = require('gen.prompts')
 local exec = requiere('gen.exec')
 local exec_docker = requiere('gen.exec_docker')
 local config = requiere('gen.config')
+local utility = require('gen.utility')
 
 M.useDocker = false
 M.model = 'llama2'
+
+local trim_table = utility.trim_table
+local get_window_options = utility.get_window_options
 
 if M.useDocker then
     M.command = 'docker exec ollama ollama run $model $prompt'
