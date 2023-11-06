@@ -11,7 +11,7 @@ local utility = require('gen.utility')
 M.useDocker = false
 M.model = 'llama2'
 
-local trim_table = utility.trim_table()
+local trim_table = utility.trim_table(tbl)
 local get_window_options = utility.get_window_options()
 
 if M.useDocker then
