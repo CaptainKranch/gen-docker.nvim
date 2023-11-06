@@ -8,7 +8,7 @@ local exec_docker = require('gen.exec_docker')
 local config = require('gen.config')
 local utility = require('gen.utility')
 
-M.useDocker = true
+M.useDocker = false
 M.model = 'llama2'
 
 local function trim_table(tbl)
