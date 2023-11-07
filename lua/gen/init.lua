@@ -53,7 +53,7 @@ end
 
 
 M.useDocker = true
-M.model = 'llama2'
+M.model = 'mistral:instruct'
 
 if M.useDocker then
     M.command = 'docker exec ollama-gpu ollama run $model $prompt'
