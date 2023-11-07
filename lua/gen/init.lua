@@ -56,7 +56,7 @@ M.useDocker = true
 M.model = 'llama2'
 
 if M.useDocker then
-    M.command = 'docker exec ollama ollama run $model $prompt'
+    M.command = 'docker exec ollama-gpu ollama run $model $prompt'
 else
     M.command = 'ollama run $model $prompt'
 end
