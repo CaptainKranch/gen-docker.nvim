@@ -9,7 +9,7 @@ local config = require('gen.config')
 local utility = require('gen.utility')
 
 M.useDocker = false
-M.model = 'mistral:instruct'
+M.model = 'mistral'
 
 local function trim_table(tbl)
     local function is_whitespace(str) return str:match("^%s*$") ~= nil end
