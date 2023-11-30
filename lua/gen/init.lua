@@ -53,7 +53,7 @@ end
 
 
 M.useDocker = true
-M.model = 'mistral:instruct'
+M.model = 'deepseek-coder:6.7b'
 
 if M.useDocker then
     M.command = 'docker exec ollama-gpu ollama run $model $prompt'
